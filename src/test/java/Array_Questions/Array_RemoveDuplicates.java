@@ -35,7 +35,7 @@ public class Array_RemoveDuplicates {
 
     public static void main(String[] args) {
         int[] arr = {2, 4, 6, 8, 2, 4, 6, 8};
-        System.out.println(Arrays.toString(removeDuplicates2(arr)));
+        System.out.println(Arrays.toString(removeDuplicates2(arr)));        // [2, 4, 6, 8]
     }
 
 }

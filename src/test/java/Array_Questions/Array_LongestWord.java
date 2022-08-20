@@ -13,29 +13,15 @@ public class Array_LongestWord {
 
     /* this will return one word only  */
     public static String longestWord(String sentence) {
-
-        // remove digits & special charachters & multiple spaces
-        sentence = sentence.replaceAll("[^a-zA-Z]", " ");
-        sentence = sentence.replaceAll("\\s+", " ");
-
-        // get an array
         String[] arr = sentence.split(" ");
+        String longestWord = arr[0];
 
-        // find the longest length
-        int maxLength = 0;
-        for(String each:arr){
-            if(each.length()>maxLength){
-                maxLength = each.length();
+        for (String each : arr){
+            if(each.length() > longestWord.length()){
+                longestWord = each;
             }
         }
-
-        // print the word(s) which has the max length
-        for(String each:arr){
-            if(each.length()==maxLength){
-                return each;
-            }
-        }
-        return "";
+        return longestWord;
     }
 
     /* this will return longest words in List  */

@@ -1,16 +1,16 @@
 package Integer_Questions;
 
-public class Integer_findDigits {
+public class Integer_countOfDigits {
     public static void main(String[] args) {
         int check = 12321;
         System.out.println(digits(check));
         System.out.println(digits2(check));
 
-
     }
 
+    // convert int to String and get length
     static int digits(int n) {
-        int digitCount = String.valueOf(n).length();
+        int digitCount = Integer.toString(n).length();      // or String.valueOf(n).length()
         return digitCount;
     }
 
@@ -18,8 +18,9 @@ public class Integer_findDigits {
         int result = 0;
         do {
             n = n / 10;
-            // System.out.println(n);
             result++;
+            // System.out.println(n);
+            // System.out.println(result);
         } while (n != 0);
         return result;
     }

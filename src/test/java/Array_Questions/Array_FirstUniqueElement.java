@@ -3,11 +3,11 @@ package Array_Questions;
 public class Array_FirstUniqueElement {
 
     /*
-    write a program that can find the first duplicated element from the array
+    write a method that can find the first duplicated element from the array
      */
 
-    public int firstDuplicatedElement(int[] array) {
-        int firstDuplicated = 0;
+    public static int firstDuplicatedElement(int[] array) {
+        int firstDuplicated = -1;
 
         for (int each : array) {
             int frequency = 0;
@@ -19,8 +19,13 @@ public class Array_FirstUniqueElement {
                 firstDuplicated = each;
                 break;
             }
-
         }
         return firstDuplicated;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2,3,4,5,4,5,6};
+        int[] arr1 = {2,3,4};
+        System.out.println(firstDuplicatedElement(arr1));
     }
 }

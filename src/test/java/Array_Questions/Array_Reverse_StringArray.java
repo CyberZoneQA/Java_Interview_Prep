@@ -6,7 +6,18 @@ import java.util.List;
 
 public class Array_Reverse_StringArray {
 
-    public static String[] reverseStingArray(String[] arr) {
+    // 1
+    public static String[] reverseStrArray(String[] arr) {
+        String[] answer = new String[arr.length];
+        int index = 0;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            answer[index++] = arr[i];
+        }
+        return answer;
+    }
+
+    // 2
+    public static String[] reverseStringArray(String[] arr) {
         List<String> rev = Arrays.asList(arr);
         Collections.reverse(rev);
         arr = (String[]) rev.toArray();
@@ -15,14 +26,9 @@ public class Array_Reverse_StringArray {
 
 
     public static void main(String[] args) {
-        String[] arr = {"coding", "start", "Day", "Day", "start", "1", "Day", "Perfect", "Sunday"};
+        String[] arr = {"a", "b", "c", "d", "e", "1", "d", "y", "z"};
+        System.out.println(Arrays.toString(reverseStrArray(arr)));
 
-        //revers string array
-        String[] newarr = new String[arr.length];
-        int n = 0;
-        for (int i = arr.length - 1; i >= 0; i--) {
-            newarr[n++] = arr[i];
-        }
-        System.out.println(Arrays.toString(newarr));
+
     }
 }
