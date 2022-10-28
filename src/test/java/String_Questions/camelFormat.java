@@ -9,7 +9,7 @@ public class camelFormat {
 
     public static void main(String[] args) {
 
-        String str = "DIKKAT DIKKAT";
+        String str = "DIKKAT DIKKAT!";
         System.out.println(camelFormat(str));             // Dikkat Dikkat
 
     }
